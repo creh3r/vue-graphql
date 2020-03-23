@@ -1,4 +1,4 @@
-# talpa
+# vuejsapollo
 
 ## Project setup
 ```
