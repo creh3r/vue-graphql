@@ -1,22 +1,15 @@
 <template>
   <div class="list">
-    <SelectableListItem v-for="machine in machines" :key="machine._id" :data="machine" />
+    <SelectableListItem v-for="item in data" :key="item.id" :data="item" />
   </div>
 </template>
 
 <script>
-import gql from 'graphql-tag'
-import SelectableListItem from './SelectableListItem.vue';
+import SelectableListItem from './SelectableListItem';
 
 export default {
   name: 'SelectableList',
-  apollo: {
-    machines: gql`query {
-      machines {
-        name
-      }
-    }`,
-  },
+  props: ['data'],
   components: {
     SelectableListItem,
   }
