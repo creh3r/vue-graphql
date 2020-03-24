@@ -1,5 +1,7 @@
 <template>
-  <SelectableList :data="machines"/>
+  <div class="home" v-if="machines">
+    <SelectableList :data="machines"/>
+  </div>
 </template>
 
 <script>

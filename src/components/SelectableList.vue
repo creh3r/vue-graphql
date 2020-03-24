@@ -1,5 +1,5 @@
 <template>
-  <div class="list">
+  <div class="list" v-if="data">
     <SelectableListItem v-for="item in data" :key="item.id" :data="item" />
   </div>
 </template>
